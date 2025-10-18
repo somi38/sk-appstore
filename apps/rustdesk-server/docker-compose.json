@@ -29,7 +29,7 @@
         }
       ],
       "environment": {
-        "ALWAYS_USE_RELAY": "${ALWAYS_USE_RELAY:false}"
+        "ALWAYS_USE_RELAY": "${ALWAYS_USE_RELAY:-false}"
       }
     }
   ]
