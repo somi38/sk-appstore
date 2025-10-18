@@ -23,21 +23,10 @@
     "dynamic": true,
     "form_fields": [
         {
-            "type": "select",
-            "label": "Force relay for all connections?",
-            "required": true,
-            "default": "N",
-            "env_variable": "ALWAYS_USE_RELAY",
-            "options": [
-                {
-                    "label": "No (prefer P2P)",
-                    "value": "N"
-                },
-                {
-                    "label": "Yes — always relay",
-                    "value": "Y"
-                }
-            ]
+            "type": "boolean",
+            "label": "Force relay for all connections? (ALWAYS_USE_RELAY)",
+            "required": false,
+            "env_variable": "ALWAYS_USE_RELAY"
         }
     ]
 }
