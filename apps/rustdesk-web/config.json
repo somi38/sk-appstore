@@ -7,7 +7,7 @@
     "port": 8500,
     "categories": [
         "network",
-        "remote-desktop"
+        "security"
     ],
     "description": "Web client UI for RustDesk accessible via HTTPS on your domain.",
     "tipi_version": 1,
