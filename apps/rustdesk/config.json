@@ -1,6 +1,6 @@
 {
     "name": "RustDesk Server (hbbs/hbbr)",
-    "id": "rustdesk-server",
+    "id": "rustdesk",
     "available": true,
     "short_desc": "Self-hosted RustDesk ID (hbbs) & Relay (hbbr) servers.",
     "author": "rustdesk",
