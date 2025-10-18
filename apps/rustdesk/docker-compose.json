@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "name": "hbbr",
+      "image": "rustdesk/rustdesk-server:latest",
+      "command": "hbbr",
+      "restart": "unless-stopped",
+      "networkMode": "host",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/root"
+        }
+      ]
+    },
+    {
+      "name": "hbbs",
+      "image": "rustdesk/rustdesk-server:latest",
+      "command": "hbbs",
+      "restart": "unless-stopped",
+      "networkMode": "host",
+      "dependsOn": "hbbr",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/root"
+        }
+      ],
+      "environment": {
+        "ALWAYS_USE_RELAY": "${ALWAYS_USE_RELAY:false}"
+      }
+    }
+  ]
+}
