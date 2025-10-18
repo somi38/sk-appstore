@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "rustdesk-web",
-      "image": "ghcr.io/pmietlicki/docker-rustdesk-web-client:latest",
+      "image": "pmietlicki/docker-rustdesk-web-client:v1",
       "isMain": true,
       "internalPort": 5000,
       "restart": "unless-stopped",
