@@ -1,0 +1,26 @@
+{
+  "name": "RustDesk Server (hbbs/hbbr)",
+  "id": "rustdesk-server",
+  "available": true,
+  "short_desc": "Self-hosted RustDesk ID (hbbs) & Relay (hbbr) servers.",
+  "author": "rustdesk",
+  "port": 21116,
+  "categories": ["network", "remote-desktop"],
+  "description": "Runs hbbs (ID) and hbbr (relay) using host networking for best connectivity.",
+  "tipi_version": 1,
+  "version": "1.1.0",
+  "source": "https://github.com/rustdesk/rustdesk-server",
+  "website": "https://rustdesk.com/docs/en/self-host/",
+  "exposable": false,
+  "no_gui": true,
+  "supported_architectures": ["amd64", "arm64"],
+  "dynamic": true,
+  "form_fields": [
+    {
+      "type": "boolean",
+      "label": "Force relay for all connections? (ALWAYS_USE_RELAY=Y)",
+      "required": false,
+      "env_variable": "ALWAYS_USE_RELAY"
+    }
+  ]
+}
