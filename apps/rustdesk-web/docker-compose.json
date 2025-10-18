@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "name": "rustdesk-web",
+      "image": "ghcr.io/pmietlicki/docker-rustdesk-web-client:latest",
+      "isMain": true,
+      "internalPort": 5000,
+      "restart": "unless-stopped",
+      "environment": {
+        "RUSTDESK_SERVER": "${RUSTDESK_SERVER_HOST}"
+      }
+    }
+  ]
+}
