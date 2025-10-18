@@ -1,0 +1,31 @@
+{
+  "name": "RustDesk Web",
+  "id": "rustdesk-web",
+  "available": true,
+  "short_desc": "Browser client for RustDesk.",
+  "author": "community",
+  "port": 8500,
+  "categories": ["network", "remote-desktop"],
+  "description": "Web client UI for RustDesk accessible via HTTPS on your domain.",
+  "tipi_version": 1,
+  "version": "0.1.0",
+  "source": "https://github.com/pmietlicki/docker-rustdesk-web-client",
+  "website": "https://rustdesk.com/docs/en/dev/build/web/",
+  "exposable": true,
+  "supported_architectures": ["amd64", "arm64"],
+  "dynamic": true,
+  "form_fields": [
+    {
+      "type": "fqdn",
+      "label": "Your RustDesk domain (this app)",
+      "required": true,
+      "env_variable": "PUBLIC_DOMAIN"
+    },
+    {
+      "type": "fqdnip",
+      "label": "hbbs/hbbr address (domain or IP of your server)",
+      "required": true,
+      "env_variable": "RUSTDESK_SERVER_HOST"
+    }
+  ]
+}
