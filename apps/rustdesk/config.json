@@ -7,7 +7,7 @@
     "port": 21116,
     "categories": [
         "network",
-        "remote-desktop"
+        "security"
     ],
     "description": "Runs hbbs (ID) and hbbr (relay) using host networking for best connectivity.",
     "tipi_version": 1,
