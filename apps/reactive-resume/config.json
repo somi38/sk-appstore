@@ -3,7 +3,7 @@
     "name": "Reactive Resume",
     "available": true,
     "short_desc": "Open-source resume builder with PDF export and public links.",
-    "description": "Reactive Resume v4 self-hosted (app + Postgres + MinIO + headless Chrome).",
+    "description": "Reactive Resume v4 self-hosted with Postgres, MinIO and headless Chrome (Browserless) for PDF export.",
     "author": "AmruthPillai",
     "source": "https://github.com/AmruthPillai/Reactive-Resume",
     "website": "https://rxresu.me/",
@@ -12,26 +12,25 @@
         "utilities"
     ],
     "tipi_version": 1,
-    "version": "4.x",
+    "version": "4.5.1",
     "supported_architectures": [
         "arm64",
         "amd64"
     ],
     "port": 3000,
     "exposable": true,
-    "dynamic_config": true,
+    "dynamic": true,
     "form_fields": [
         {
             "type": "fqdn",
-            "label": "Public App Domain (FQDN)",
+            "label": "Public App Domain (FQDN, with https://)",
             "required": true,
             "env_variable": "PUBLIC_URL",
             "placeholder": "https://rx.pynode.com"
         },
         {
             "type": "text",
-            "label": "Storage URL (public)",
-            "hint": "Option A: http(s)://<host>:9000/default  •  Option B: https://s3.rx.pynode.com/default",
+            "label": "Storage URL (public MinIO bucket URL incl. /default)",
             "required": true,
             "env_variable": "STORAGE_URL",
             "placeholder": "https://s3.rx.pynode.com/default"
@@ -41,59 +40,58 @@
             "label": "Access Token Secret",
             "required": true,
             "min": 64,
-            "env_variable": "ACCESS_TOKEN_SECRET",
-            "encoding": "hex"
+            "encoding": "hex",
+            "env_variable": "ACCESS_TOKEN_SECRET"
         },
         {
             "type": "random",
             "label": "Refresh Token Secret",
             "required": true,
             "min": 64,
-            "env_variable": "REFRESH_TOKEN_SECRET",
-            "encoding": "hex"
+            "encoding": "hex",
+            "env_variable": "REFRESH_TOKEN_SECRET"
         },
         {
             "type": "random",
             "label": "Postgres Password",
             "required": true,
             "min": 24,
-            "env_variable": "POSTGRES_PASSWORD",
-            "encoding": "hex"
+            "encoding": "hex",
+            "env_variable": "POSTGRES_PASSWORD"
         },
         {
             "type": "text",
             "label": "MinIO Root User",
             "required": true,
-            "env_variable": "MINIO_ROOT_USER",
-            "default": "minioadmin"
+            "default": "minioadmin",
+            "env_variable": "MINIO_ROOT_USER"
         },
         {
             "type": "random",
             "label": "MinIO Root Password",
             "required": true,
             "min": 24,
-            "env_variable": "MINIO_ROOT_PASSWORD",
-            "encoding": "hex"
+            "encoding": "hex",
+            "env_variable": "MINIO_ROOT_PASSWORD"
         },
         {
             "type": "random",
             "label": "Chrome Token",
             "required": true,
             "min": 32,
-            "env_variable": "CHROME_TOKEN",
-            "encoding": "hex"
+            "encoding": "hex",
+            "env_variable": "CHROME_TOKEN"
         },
         {
             "type": "email",
             "label": "MAIL_FROM",
             "required": true,
-            "env_variable": "MAIL_FROM",
-            "default": "noreply@rx.pynode.com"
+            "default": "noreply@rx.pynode.com",
+            "env_variable": "MAIL_FROM"
         },
         {
             "type": "text",
-            "label": "SMTP_URL (optional)",
-            "hint": "Format: smtp://user:pass@smtp.host:587",
+            "label": "SMTP_URL (optional, smtp://user:pass@smtp.host:587)",
             "required": false,
             "env_variable": "SMTP_URL"
         },
@@ -101,8 +99,8 @@
             "type": "boolean",
             "label": "Disable Signups?",
             "required": true,
-            "env_variable": "DISABLE_SIGNUPS",
-            "default": "false"
+            "default": "false",
+            "env_variable": "DISABLE_SIGNUPS"
         }
     ]
 }
