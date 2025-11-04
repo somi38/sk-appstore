@@ -1,15 +1,12 @@
 {
   "schemaVersion": 2,
-  "services": [
-    {
-      "name": "0",
-      "image": "pmietlicki/rustdesk-web-client:v1",
-      "environment": [
-        {
-          "key": "RUSTDESK_SERVER",
-          "value": "${RUSTDESK_SERVER_HOST}"
-        }
-      ]
-    }
-  ]
+  "name": "rustdesk-web",
+  "type": "service",
+  "image": "pmietlicki/rustdesk-web-client:v1",
+  "isMain": true,
+  "internalPort": 5000,
+  "restartPolicy": "unless-stopped",
+  "environment": {
+    "RUSTDESK_SERVER": "${RUSTDESK_SERVER_HOST}"
+  }
 }
