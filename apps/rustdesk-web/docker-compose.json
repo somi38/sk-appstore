@@ -1,5 +1,4 @@
 {
-  "version": "3.8",
   "services": [
     {
       "name": "rustdesk-web",
@@ -11,5 +10,7 @@
         "RUSTDESK_SERVER": "${RUSTDESK_SERVER_HOST}"
       }
     }
-  ]
+  ],
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json"
 }
