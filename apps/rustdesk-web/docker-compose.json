@@ -1,6 +1,4 @@
 {
-  "_comment": ""schemaVersion": 2",
-  "_comment": ""$schema": "https://schemas.runtipi.io/dynamic-compose.json"",
   "services": [
     {
       "name": "rustdesk-web",
