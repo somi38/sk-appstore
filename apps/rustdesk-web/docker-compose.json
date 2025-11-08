@@ -6,7 +6,7 @@
       "name": "rustdesk-web",
       "image": "pmietlicki/rustdesk-web-client:v1",
       "isMain": true,
-      "internalPort": 5000,
+      "internalPort": "5000",
       "restart": "unless-stopped",
       "environment": [
         {
