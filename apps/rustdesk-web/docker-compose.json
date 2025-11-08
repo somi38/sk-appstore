@@ -4,14 +4,11 @@
       "name": "rustdesk-web",
       "image": "pmietlicki/rustdesk-web-client:v1",
       "isMain": true,
-      "internalPort": "5000",
+      "internalPort": 5000,
       "restart": "unless-stopped",
-      "environment": [
-        {
-          "key": "RUSTDESK_SERVER",
-          "value": "${RUSTDESK_SERVER_HOST}"
-        }
-      ]
+      "environment": {
+        "RUSTDESK_SERVER": "${RUSTDESK_SERVER_HOST}"
+      }
     }
   ]
 }
